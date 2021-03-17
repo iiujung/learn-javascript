@@ -1,22 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <style>
+      .title {
+        padding-top: 2rem;
+      }
+    </style>
   </head>
   <body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p class="title">1.開燈關燈</p>
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <!-- 注意雙引號與單引號 -->
     <button
-      onclick="document.getElementById=('myImg').src='./img/pic_bulboff.gif'"
+      onclick="document.getElementById('myImage').src='./img/pic_bulbon.gif'"
     >
-      turn on the light
+      Turn on the light
     </button>
-    <img id="myImg" src="./img/pic_bulboff.gif" alt="" style="width: 100px" />
+
+    <img id="myImage" src="./img/pic_bulboff.gif" style="width: 100px" />
+
     <button
-      onclick="document.getElementById=('myImg').src='./img/pic_bulbon.gif'"
+      onclick="document.getElementById('myImage').src='./img/pic_bulboff.gif'"
     >
-      turn off the light
+      Turn off the light
     </button>
+
+    <p id="text" class="title">2.注意-綠巨人浩克出沒</p>
+    <p>JavaScript can change the style of an HTML element.</p>
+
+    <button onclick="document.getElementById('text').style.fontSize='50px'">
+      把字體變大吧！
+    </button>
+
+    <p id="hide" class="title">3.隱藏-神奇毛毯</p>
+    <p>JavaScript can hide HTML elements.</p>
+
+    <button onclick="document.getElementById('hide').style.display='none'">
+      變不見囉！
+    </button>
+    <button onclick="document.getElementById('hide').style.display='block'">
+      變出來囉！
+    </button>
+
+    <p>javascript 的家 放在body 裡面的 script!</p>
+    <script>
+      document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script>
   </body>
 </html>
